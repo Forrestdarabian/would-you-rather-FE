@@ -15,28 +15,31 @@ function Login() {
       <body className="home-body">
         <div className="home-div">
           <h3>
-            Welcome to the Login Page! Fill out the Form below to start making
-            or solving some riddles!
+            Welcome to the Login Page! Fill out the Form below to start posting
+            riddles!
           </h3>
         </div>
-        <div className="home-btn">
-          <a href="/login">
-            <button>login</button>
-          </a>
-        </div>
-        <div className="home-btn">
-          <a href="/login">
-            <button>Login</button>
-          </a>
-        </div>
         <div className="home-div">
-          <h3>What is this website?</h3>
-          <p>
-            Riddle Me This is an interactive site where you can post your own
-            riddles for people to solve. Along with this, you can also try to
-            solve riddles other people have posted. Start by creating an
-            account, then head over to the riddles tab to check some out!
-          </p>
+          <form className="home-form">
+            <label>Username: </label>
+            <input
+              autocapitalize="off"
+              type="text"
+              className="form-control"
+              placeholder=" Username"
+            />
+            <br />
+            <label>Password: </label>
+
+            <input
+              type="password"
+              className="form-control"
+              placeholder=" Enter password"
+            />
+          </form>
+          <button type="submit" className="btn btn-primary btn-block">
+            Login
+          </button>
         </div>
       </body>
       <footer className="footer">

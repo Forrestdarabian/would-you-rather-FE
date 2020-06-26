@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
 /* Place the navbar at the bottom of the page, and make it stick */
 .navbar {
   background-color: #333;
@@ -10,6 +12,7 @@
   align-content: center;
   align-items: center;
   justify-content: center;
+  font-family: "Lobster", cursive;
 }
 
 /* Style the links inside the navigation bar */
@@ -23,6 +26,7 @@
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  font-family: "Lobster", cursive;
 }
 
 /* Change the color of links on hover */

@@ -19,24 +19,34 @@ function Register() {
             Account!
           </h3>
         </div>
-        <div className="home-btn">
-          <a href="/register">
-            <button>Register</button>
-          </a>
-        </div>
-        <div className="home-btn">
-          <a href="/login">
-            <button>Login</button>
-          </a>
-        </div>
         <div className="home-div">
-          <h3>What is this website?</h3>
-          <p>
-            Riddle Me This is an interactive site where you can post your own
-            riddles for people to solve. Along with this, you can also try to
-            solve riddles other people have posted. Start by creating an
-            account, then head over to the riddles tab to check some out!
-          </p>
+          <form className="home-form">
+            <label>Username: </label>
+            <input
+              autocapitalize="off"
+              type="text"
+              className="form-control"
+              placeholder=" Username"
+            />
+            <br />
+            <label>Password: </label>
+
+            <input
+              type="password"
+              className="form-control"
+              placeholder=" Enter password"
+            />
+            <br />
+            <label>Email: </label>
+            <input
+              type="email"
+              className="form-control"
+              placeholder=" Enter email"
+            />
+          </form>
+          <button type="submit" className="btn btn-primary btn-block">
+            Sign Up
+          </button>
         </div>
       </body>
       <footer className="footer">
