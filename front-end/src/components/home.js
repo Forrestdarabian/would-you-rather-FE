@@ -1,10 +1,14 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
+import { logOut } from "../store/actions";
+
 import Footer from "../functionality/footer";
 import "../index.css";
 
-function Home() {
+function Home(props) {
+  const { touched, errors, logInUser, history, token } = props;
+  let userName = localStorage.getItem("username");
   return (
     <div className="home">
       <header className="home-header">
@@ -15,18 +19,43 @@ function Home() {
       <body className="home-body">
         <div className="home-div">
           <h3>
-            Welcome to the Home Page! Register or Login now to Create / Solve
-            some Riddles!
+            Welcome to the Home Page{userName ? `, ${userName}` : ""}! Register
+            or Login now to Create / Solve some Riddles!
           </h3>
         </div>
-        <div className="home-btn">
-          <a href="/register">
-            <button>Register</button>
-          </a>
-          <a href="/login">
-            <button>Login</button>
-          </a>
-        </div>
+        {token ? (
+          <div>
+            <NavLink to="/create">
+              <button className="home">Submit a Riddle</button>
+            </NavLink>
+            <NavLink to="/riddles">
+              <button className="home">Posted Riddles</button>
+            </NavLink>
+            <br />
+            <button
+              className="home"
+              onClick={() => {
+                props.logOut();
+                props.history.push(`/login/`);
+              }}
+            >
+              Logout
+            </button>
+          </div>
+        ) : (
+          <>
+            {" "}
+            <div className="home-btn">
+              <a href="/register">
+                <button>Register</button>
+              </a>
+              <a href="/login">
+                <button>Login</button>
+              </a>
+            </div>
+          </>
+        )}
+
         <div className="home-div">
           <h3>What is this website?</h3>
           <p>
@@ -44,4 +73,11 @@ function Home() {
   );
 }
 
-export default Home;
+const mapStateToProps = (state) => {
+  console.log(`THIS IS MSTP STATE IN LOGIN`, state);
+  return {
+    token: state.token,
+    logInUser: state.logInUser,
+  };
+};
+export default connect(mapStateToProps, { logOut: logOut })(Home);

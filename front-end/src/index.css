@@ -51,9 +51,30 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #606c38;
+  color: #fefae0;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+button {
+  background-color: #bc6c25;
+  color: #fefae0;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+input {
+  margin: 10px;
+  border-radius: 10px;
+}
+
+h1 {
+  background-color: #dda15e;
+  border-radius: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
