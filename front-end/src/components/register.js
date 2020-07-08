@@ -2,14 +2,17 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import Footer from "../functionality/footer";
+import question from "../icons/question.svg";
+
 import "../index.css";
 
 function Register() {
   return (
     <div className="home">
       <header className="home-header">
-        <div className="home-div">
+        <div className="startup-div">
           <h1>Riddle Me This...</h1>
+          <img className="question" src={question} />
         </div>
       </header>
       <body className="home-body">
@@ -43,10 +46,11 @@ function Register() {
               className="form-control"
               placeholder=" Enter email"
             />
+            <br />
+            <button type="submit" className="btn btn-primary btn-block">
+              Sign Up
+            </button>
           </form>
-          <button type="submit" className="btn btn-primary btn-block">
-            Sign Up
-          </button>
         </div>
       </body>
       <footer className="footer">

@@ -65,6 +65,7 @@ button {
   color: #fefae0;
   margin: 10px;
   border-radius: 10px;
+  font-size: larger;
 }
 
 input {
@@ -73,8 +74,45 @@ input {
 }
 
 h1 {
-  background-color: #dda15e;
   border-radius: 10px;
-  margin-left: 100px;
-  margin-right: 100px;
+  /* margin-left: 10%;
+  margin-right: 10%; */
+}
+
+img.question {
+  max-width: 3%;
+}
+
+.startup-div {
+  background-color: #dda15e;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.creation {
+  background-color: #283618;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding-top: 5px;
+  border-radius: 10px;
+}
+
+.home-form {
+  background-color: #283618;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding-top: 5px;
+  border-radius: 10px;
+}
+
+.explanation {
+  background-color: #283618;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding-top: 5px;
+  border-radius: 10px;
+  padding: 10px;
 }
