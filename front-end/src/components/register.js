@@ -3,10 +3,38 @@ import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import Footer from "../functionality/footer";
 import question from "../icons/question.svg";
-
+import axiosWithAuth from "../utils/axiosWithAuth";
+import { addUser } from "../store/actions";
 import "../index.css";
 
-function Register() {
+const Register = (props) => {
+  console.log(props);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    let user = {
+      username: e.target[0].value,
+      password: e.target[1].value,
+      email: e.target[2].value,
+    };
+
+    await axiosWithAuth()
+      .post("api/users/register", {
+        username: user.username,
+        password: user.password,
+        email: user.email,
+      })
+      .then((res) => {
+        console.log(res.data);
+        props.history.push("/login/");
+        return true;
+      })
+      .catch((err) => {
+        console.log(err);
+        alert(err.response.data.message);
+        return err;
+      });
+  };
   return (
     <div className="home">
       <header className="home-header">
@@ -23,7 +51,7 @@ function Register() {
           </h3>
         </div>
         <div className="home-div">
-          <form className="home-form">
+          <form onSubmit={(e) => handleSubmit(e)} className="home-form">
             <label>Username: </label>
             <input
               autocapitalize="off"
@@ -58,6 +86,6 @@ function Register() {
       </footer>
     </div>
   );
-}
+};
 
-export default Register;
+export default connect(null, { addUser: addUser })(Register);

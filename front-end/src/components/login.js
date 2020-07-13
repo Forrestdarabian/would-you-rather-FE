@@ -1,12 +1,37 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import * as Yup from "yup";
+import { Button, Label } from "reactstrap";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
+import { Form, Field, withFormik } from "formik";
+import { logInUser } from "../store/actions";
 import Footer from "../functionality/footer";
 import question from "../icons/question.svg";
-
 import "../index.css";
 
-function Login() {
+const UserLogin = ({ touched, errors, LogInUser, history, token }) => {
+  const [user, setUser] = useState({
+    userName: "",
+    password: "",
+  });
+
+  useEffect(() => {
+    if (token) {
+      history.pushState("/create");
+    }
+  }, [token]);
+
+  const handleChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.targt.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if ((user.userName, e && user.password)) {
+      logInUser(user);
+    }
+  };
+
   return (
     <div className="home">
       <header className="home-header">
@@ -23,7 +48,7 @@ function Login() {
           </h3>
         </div>
         <div className="home-div">
-          <form className="home-form">
+          <form onChange={handleChange} className="home-form">
             <label>Username: </label>
             <input
               autocapitalize="off"
@@ -32,15 +57,24 @@ function Login() {
               placeholder=" Username"
             />
             <br />
+            {touched.username && errors.username && (
+              <p className="error">{errors.username}</p>
+            )}{" "}
             <label>Password: </label>
-
             <input
               type="password"
               className="form-control"
               placeholder=" Enter password"
             />
             <br />
-            <button type="submit" className="btn btn-primary btn-block">
+            {touched.password && errors.password && (
+              <p className="error">{errors.password}</p>
+            )}
+            <button
+              onClick={(e) => handleSubmit(e)}
+              type="submit"
+              className="btn btn-primary btn-block"
+            >
               Login
             </button>
           </form>
@@ -51,6 +85,28 @@ function Login() {
       </footer>
     </div>
   );
-}
+};
 
-export default Login;
+const LoginWithFormik = withFormik({
+  mapPropsToValues({ username, password }) {
+    return {
+      username: username || "",
+      password: password || "",
+    };
+  },
+
+  validationSchema: Yup.object().shape({
+    username: Yup.string().required("Please enter a username!"),
+    password: Yup.string().required("Please enter a password!"),
+  }),
+})(UserLogin);
+
+const mapStateToProps = (state) => {
+  console.log(`THIS IS MSTP STATE IN LOGIN`, state);
+  return {
+    token: state.token,
+  };
+};
+export default connect(mapStateToProps, { logInUser: logInUser })(
+  LoginWithFormik
+);

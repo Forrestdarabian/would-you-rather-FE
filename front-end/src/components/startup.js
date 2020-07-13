@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
+import Footer from "../functionality/footer";
 import question from "../icons/question.svg";
 import "../index.css";
 
@@ -23,6 +24,9 @@ function Startup() {
           </a>
         </div>
       </body>
+      <footer className="footer">
+        <Footer />
+      </footer>
     </div>
   );
 }

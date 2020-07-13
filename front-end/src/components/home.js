@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import { logOut } from "../store/actions";
 import question from "../icons/question.svg";
-
 import Footer from "../functionality/footer";
 import "../index.css";
 
