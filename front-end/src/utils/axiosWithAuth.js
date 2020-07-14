@@ -11,7 +11,7 @@ const axiosWithAuth = () => {
     },
     baseURL: isTesting
       ? "http://localhost:5000/"
-      : "https://riddle-me-this.herokuapp.com/",
+      : "https://riddle-me-this-be.herokuapp.com/",
   });
 };
 export default axiosWithAuth;

@@ -135,7 +135,7 @@ export const updateRiddle = (updatedRiddle, id) => (dispatch) => {
   dispatch({ type: EDIT_START });
   axiosWithAuth()
     .put(
-      `https://riddle-me-this.herokuapp.com/api/users/riddles/${id}`,
+      `https://riddle-me-this-be.herokuapp.com/api/users/riddles/${id}`,
       updatedRiddle
     )
     .then((res) => {
@@ -155,7 +155,7 @@ export const DELETE_RIDDLE_FAILURE = "DELETE_RIDDLE_FAILURE";
 export const deleteRiddle = (id) => (dispatch) => {
   dispatch({ type: DELETE_RIDDLE_START });
   axiosWithAuth()
-    .delete(`https://riddle-me-this.herokuapp.com/api/users/riddles/${id}`)
+    .delete(`https://riddle-me-this-be.herokuapp.com/api/users/riddles/${id}`)
     .then((res) => {
       console.log(res.data.message);
       dispatch({ type: DELETE_RIDDLE_SUCCESS, payload: id });
