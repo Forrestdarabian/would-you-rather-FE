@@ -43,44 +43,42 @@ const Register = (props) => {
           <img className="question" src={question} />
         </div>
       </header>
-      <body className="home-body">
-        <div className="home-div">
-          <h3>
-            Welcome to the Register Page! Fill out the Form below to Create an
-            Account!
-          </h3>
-        </div>
-        <div className="home-div">
-          <form onSubmit={(e) => handleSubmit(e)} className="home-form">
-            <label>Username: </label>
-            <input
-              autocapitalize="off"
-              type="text"
-              className="form-control"
-              placeholder=" Username"
-            />
-            <br />
-            <label>Password: </label>
+      <div className="home-div">
+        <h3>
+          Welcome to the Register Page! Fill out the Form below to Create an
+          Account!
+        </h3>
+      </div>
+      <div className="home-div">
+        <form onSubmit={(e) => handleSubmit(e)} className="home-form">
+          <label>Username: </label>
+          <input
+            autocapitalize="off"
+            type="text"
+            className="form-control"
+            placeholder=" Username"
+          />
+          <br />
+          <label>Password: </label>
 
-            <input
-              type="password"
-              className="form-control"
-              placeholder=" Enter password"
-            />
-            <br />
-            <label>Email: </label>
-            <input
-              type="email"
-              className="form-control"
-              placeholder=" Enter email"
-            />
-            <br />
-            <button type="submit" className="btn btn-primary btn-block">
-              Sign Up
-            </button>
-          </form>
-        </div>
-      </body>
+          <input
+            type="password"
+            className="form-control"
+            placeholder=" Enter password"
+          />
+          <br />
+          <label>Email: </label>
+          <input
+            type="email"
+            className="form-control"
+            placeholder=" Enter email"
+          />
+          <br />
+          <button type="submit" className="btn btn-primary btn-block">
+            Sign Up
+          </button>
+        </form>
+      </div>
       <footer className="footer">
         <Footer />
       </footer>

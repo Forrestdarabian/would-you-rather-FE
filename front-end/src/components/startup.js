@@ -14,16 +14,14 @@ function Startup() {
           <img className="question" src={question} />
         </div>
       </header>
-      <body className="startup-body">
-        <div className="h3-div">
-          <h3>Welcome to a world of riddles! Press start below to enter!</h3>
-        </div>
-        <div className="startup-btn">
-          <a href="/home">
-            <button>Start</button>
-          </a>
-        </div>
-      </body>
+      <div className="h3-div">
+        <h3>Welcome to a world of riddles! Press start below to enter!</h3>
+      </div>
+      <div className="startup-btn">
+        <a href="/home">
+          <button>Start</button>
+        </a>
+      </div>
       <footer className="footer">
         <Footer />
       </footer>

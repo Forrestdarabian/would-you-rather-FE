@@ -9,7 +9,7 @@ import Footer from "../functionality/footer";
 import question from "../icons/question.svg";
 import "../index.css";
 
-const UserLogin = ({ touched, errors, LogInUser, history, token }) => {
+const UserLogin = ({ touched, errors, logInUser, history, token }) => {
   const [user, setUser] = useState({
     userName: "",
     password: "",
@@ -40,46 +40,46 @@ const UserLogin = ({ touched, errors, LogInUser, history, token }) => {
           <img className="question" src={question} />
         </div>
       </header>
-      <body className="home-body">
-        <div className="home-div">
-          <h3>
-            Welcome to the Login Page! Fill out the Form below to start posting
-            riddles!
-          </h3>
-        </div>
-        <div className="home-div">
-          <form onChange={handleChange} className="home-form">
-            <label>Username: </label>
-            <input
-              autocapitalize="off"
-              type="text"
-              className="form-control"
-              placeholder=" Username"
-            />
-            <br />
-            {touched.username && errors.username && (
-              <p className="error">{errors.username}</p>
-            )}{" "}
-            <label>Password: </label>
-            <input
-              type="password"
-              className="form-control"
-              placeholder=" Enter password"
-            />
-            <br />
-            {touched.password && errors.password && (
-              <p className="error">{errors.password}</p>
-            )}
-            <button
-              onClick={(e) => handleSubmit(e)}
-              type="submit"
-              className="btn btn-primary btn-block"
-            >
-              Login
-            </button>
-          </form>
-        </div>
-      </body>
+      <div className="home-div">
+        <h3>
+          Welcome to the Login Page! Fill out the Form below to start posting
+          riddles!
+        </h3>
+      </div>
+      <div className="home-div">
+        <Form onChange={handleChange} className="home-form">
+          <Label for="username">Username: </Label>
+          <Field
+            autoCapitalize="off"
+            type="text"
+            name="username"
+            className="form-control"
+            placeholder="Enter your Username"
+          />
+          <br />
+          {touched.username && errors.username && (
+            <p className="error">{errors.username}</p>
+          )}{" "}
+          <Label for="password">Password: </Label>
+          <Field
+            type="password"
+            name="password"
+            className="form-control"
+            placeholder=" Enter your Password"
+          />
+          <br />
+          {touched.password && errors.password && (
+            <p className="error">{errors.password}</p>
+          )}
+          <Button
+            onClick={(e) => handleSubmit(e)}
+            type="submit"
+            className="submit"
+          >
+            Login
+          </Button>
+        </Form>
+      </div>
       <footer className="footer">
         <Footer />
       </footer>
