@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
 /* Place the navbar at the bottom of the page, and make it stick */
+
+h1 {
+  font-size: 30px;
+}
+
 .navbar {
   background-color: #283618;
   overflow: hidden;
@@ -23,9 +28,10 @@
   align-items: center;
   color: #fefae0;
   text-align: center;
-  padding: 14px 16px;
+  padding-left: 14px;
+  padding-right: 14px;
   text-decoration: none;
-  font-size: 30px;
+  /* font-size: 30px; */
   font-family: "Lobster", cursive;
 }
 

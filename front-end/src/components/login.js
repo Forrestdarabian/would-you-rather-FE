@@ -17,17 +17,17 @@ const UserLogin = ({ touched, errors, LogInUser, history, token }) => {
 
   useEffect(() => {
     if (token) {
-      history.pushState("/create");
+      history.push("/create");
     }
   }, [token]);
 
   const handleChange = (e) => {
-    setUser({ ...user, [e.target.name]: e.targt.value });
+    setUser({ ...user, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if ((user.userName, e && user.password)) {
+    if ((user.username, e && user.password)) {
       logInUser(user);
     }
   };

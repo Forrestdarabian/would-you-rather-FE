@@ -87,7 +87,7 @@ export const FETCH_START = "FETCH_START";
 export const FETCH_SUCCESS = "FETCH_SUCCESS";
 export const FETCH_FAILURE = "FETCH_FAILURE";
 
-export const fetchRIDDLE = () => (dispatch) => {
+export const fetchRiddle = () => (dispatch) => {
   dispatch({ type: FETCH_START });
   axiosWithAuth()
     .get(`/api/users/riddles`)
@@ -105,7 +105,7 @@ export const ADDING_RIDDLE = "ADDING_RIDDLE";
 export const ADD_RIDDLE_SUCCESS = "ADD_RIDDLE_SUCCESS";
 export const ADD_RIDDLE_FAILURE = "ADD_RIDDLE_FAILURE";
 
-export const addriddles = (riddleItems) => (dispatch) => {
+export const addRiddles = (riddleItems) => (dispatch) => {
   console.log(riddleItems);
   dispatch({ type: ADDING_RIDDLE });
   axiosWithAuth()
