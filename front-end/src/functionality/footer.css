@@ -1,13 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-
-/* Place the navbar at the bottom of the page, and make it stick */
-
+@import url("https://fonts.googleapis.com/css2?family=Rye&family=Special+Elite&display=swap");
 h1 {
   font-size: 30px;
 }
 
 .navbar {
-  background-color: #283618;
+  background-color: #011936;
   overflow: hidden;
   position: fixed;
   bottom: 0;
@@ -17,7 +14,7 @@ h1 {
   align-content: center;
   align-items: center;
   justify-content: center;
-  font-family: "Lobster", cursive;
+  font-family: "Rye", cursive;
 }
 
 /* Style the links inside the navigation bar */
@@ -32,12 +29,12 @@ h1 {
   padding-right: 14px;
   text-decoration: none;
   /* font-size: 30px; */
-  font-family: "Lobster", cursive;
+  font-family: "Rye", cursive;
 }
 
 /* Change the color of links on hover */
 .navbar a:hover {
-  background-color: #dda15e;
+  background-color: #ed254e;
   color: black;
 }
 
@@ -46,3 +43,120 @@ h1 {
   background-color: #4caf50;
   color: white;
 } */
+
+/* .bottom {
+  padding-left: 20px;
+  padding-right: 20px;
+} */
+
+@media (max-width: 1361px) {
+  .navbar,
+  h1 {
+    font-size: 95%;
+  }
+}
+
+@media (max-width: 1065px) {
+  .navbar,
+  h1 {
+    font-size: 85%;
+  }
+}
+
+@media (max-width: 965px) {
+  .navbar,
+  h1 {
+    font-size: 75%;
+  }
+}
+
+@media (max-width: 877px) {
+  .navbar,
+  h1 {
+    font-size: 65%;
+  }
+  .copyright {
+    font-size: smaller;
+  }
+
+  .left {
+    font-size: smaller;
+  }
+}
+
+@media (max-width: 730px) {
+  .copyright {
+    margin-right: 5px;
+  }
+
+  .left {
+    margin-left: 5px;
+  }
+  button {
+    font-size: smaller;
+  }
+  /* .navbar a {
+    padding-left: 0px;
+    padding-right: 0px;
+  } */
+}
+
+@media (max-width: 730px) {
+  .copyright {
+    margin-right: -50px;
+  }
+
+  .left {
+    margin-left: -50px;
+  }
+}
+
+@media (max-width: 593px) {
+  .copyright {
+    margin-right: -75px;
+  }
+
+  .left {
+    margin-left: -75px;
+  }
+}
+
+@media (max-width: 497px) {
+  .navbar a {
+    padding: 5px;
+  }
+  .copyright {
+    font-size: 5px;
+  }
+
+  .left {
+    font-size: 5px;
+    padding-right: 6px;
+  }
+}
+
+@media (max-width: 372px) {
+  .copyright {
+    font-size: 5px;
+    margin-left: 125px;
+  }
+
+  .left {
+    font-size: 5px;
+    margin-right: 125px;
+  }
+}
+
+@media (max-width: 275px) {
+  * {
+    font-size: 5px;
+  }
+}
+
+.copyright {
+  padding-right: 100px;
+}
+
+.left {
+  padding-left: 100px;
+}

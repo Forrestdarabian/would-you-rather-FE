@@ -60,9 +60,8 @@ function Home(props) {
         <h3>What is this website?</h3>
         <p>
           Riddle Me This is an interactive site where you can post your own
-          riddles for people to solve. Along with this, <br /> you can also try
-          to solve riddles other people have posted. Start by creating an
-          account, then head over to the riddles tab to check some out!
+          riddles for people to solve. Start by creating an account, then head
+          over to the riddles tab to check some out!
         </p>
       </div>
       <footer className="footer">

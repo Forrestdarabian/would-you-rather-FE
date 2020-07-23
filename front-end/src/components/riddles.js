@@ -3,13 +3,14 @@ import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import Card from "./card-view";
 import loading from "../icons/giphy.gif";
+import question from "../icons/question.svg";
 import { logOut, fetchRiddle, deleteRiddle } from "../store/actions";
 import "../index.css";
 import Footer from "../functionality/footer";
 
 const Riddles = (props) => {
   const { touched, errors, logInUser, history, token } = props;
-
+  let userName = localStorage.getItem("username");
   if (!token) {
     props.history.push("/login/");
   }
@@ -27,14 +28,14 @@ const Riddles = (props) => {
       <header className="home-header">
         <div className="startup-div">
           <h1>Riddle Me This...</h1>
-          {/* <img className="question" src={question} /> */}
+          <img className="question" src={question} />
         </div>
       </header>
       <div className="home-div">
         <h3>
-          Welcome to the Riddles Page! Read some of the posted riddles and try
-          to solve them! <br /> If you're stuck, you can press the "Reveal
-          Answer" button!
+          Welcome to the Riddles Page{userName ? `, ${userName}` : ""}! Read
+          some of the posted riddles and try to solve them! <br /> If you're
+          stuck, you can press the "Reveal Answer" button!
         </h3>
       </div>
       <div
@@ -58,6 +59,11 @@ const Riddles = (props) => {
       <footer className="footer">
         <Footer />
       </footer>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
   );
 };

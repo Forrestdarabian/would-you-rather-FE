@@ -1,11 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Rye&family=Special+Elite&display=swap");
 .App {
   text-align: center;
 }
 
 * {
-  font-family: "Lobster", cursive;
+  font-family: "Rye", cursive;
   font-weight: lighter;
 }
 
@@ -21,7 +20,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #011936;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -46,12 +45,8 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #606c38;
+  font-family: "Rye", cursive;
+  background-color: #465362;
   color: #fefae0;
 }
 
@@ -61,8 +56,8 @@ code {
 }
 
 button {
-  background-color: #bc6c25;
-  color: #fefae0;
+  background-color: #f7d126;
+  color: #000000;
   margin: 10px;
   border-radius: 10px;
   font-size: larger;
@@ -71,6 +66,12 @@ button {
 input {
   margin: 10px;
   border-radius: 10px;
+}
+
+textarea {
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
 }
 
 h1 {
@@ -84,7 +85,7 @@ img.question {
 }
 
 .startup-div {
-  background-color: #dda15e;
+  background-color: #ed254e;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -97,7 +98,7 @@ img.question {
 }
 
 .creation {
-  background-color: #283618;
+  background-color: #011936;
   margin-left: 30%;
   margin-right: 30%;
   padding-top: 5px;
@@ -105,18 +106,93 @@ img.question {
 }
 
 .home-form {
-  background-color: #283618;
+  background-color: #011936;
   margin-left: 30%;
   margin-right: 30%;
   padding-top: 5px;
   border-radius: 10px;
 }
 
+.home-div {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
 .explanation {
-  background-color: #283618;
+  background-color: #011936;
   margin-left: 30%;
   margin-right: 30%;
   padding-top: 5px;
   border-radius: 10px;
   padding: 10px;
+}
+
+@media (max-width: 709px) {
+  .explanation {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+@media (max-width: 400px) {
+  .explanation {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+@media (max-width: 400px) {
+  .startup-div h1 {
+    font-size: small;
+  }
+}
+
+@media (max-width: 1242px) {
+  img.question {
+    max-width: 4%;
+  }
+}
+
+@media (max-width: 931px) {
+  img.question {
+    max-width: 4%;
+  }
+}
+
+@media (max-width: 858px) {
+  img.question {
+    max-width: 6%;
+  }
+}
+
+@media (max-width: 550px) {
+  img.question {
+    max-width: 6%;
+  }
+}
+
+@media (max-width: 400px) {
+  a,
+  h3,
+  p {
+    font-size: smaller;
+  }
+  p {
+    padding-right: 7px;
+  }
+}
+
+@media (max-width: 630px) {
+  input,
+  textarea {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 435px) {
+  .creation,
+  .home-form {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }

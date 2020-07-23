@@ -54,50 +54,61 @@ const Create = ({
       </header>
       <div className="home-div">
         <h3>
-          Welcome to the Create Page! Fill out the Form below to post your own
-          riddle!
+          Welcome to the Create Page{userName ? `, ${userName}` : ""}! Fill out
+          the Form below to post your own riddle!
         </h3>
       </div>
       <form onSubmit={(e) => handleSubmit(e)} className="creation">
         {/* // onSubmit={(e) => handleSubmit(e)}> */}
 
         <div className="form-group">
-          <label>Riddle Name: </label>
-          <input
+          <label>Your Name: </label>
+          <br />
+          <textarea
+            rows="1"
+            cols="25"
             className="form-control"
             id="name"
             type="text"
             name="name"
             maxLength={50}
-            placeholder="Name"
+            placeholder="Enter your name"
             value={name}
             onChange={(e) => handleChanges(e)}
             required
           />
         </div>
         <div className="form-group">
-          <label>Riddle Description: </label>
-          <input
+          <label>Riddle: </label>
+          <br />
+
+          <textarea
+            rows="3"
+            cols="25"
             className="form-control"
             id="description"
             type="text"
             name="description"
             maxLength={200}
-            placeholder="Description"
+            placeholder="Please enter the entire riddle here"
             value={description}
             onChange={(e) => handleChanges(e)}
             required
           />
         </div>
         <div className="form-group">
-          <label>Your Name: </label>
-          <input
+          <label>Answer: </label>
+          <br />
+
+          <textarea
+            rows="2"
+            cols="25"
             className="form-control"
             id="username"
             type="text"
             name="username"
             maxLength={200}
-            placeholder="Enter your name"
+            placeholder="Please enter the answer to your riddle"
             value={username}
             onChange={(e) => handleChanges(e)}
             required

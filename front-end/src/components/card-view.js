@@ -15,6 +15,7 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import ShareIcon from "@material-ui/icons/Share";
 import EditIcon from "@material-ui/icons/Edit";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
+import question from "../icons/question.svg";
 import { NavLink } from "react-router-dom";
 import "../index.css";
 
@@ -25,6 +26,8 @@ const useStyles = makeStyles((theme) => ({
   media: {
     height: 0,
     paddingTop: "56.25%", // 16:9
+    width: "40%",
+    marginLeft: "30%",
   },
   expand: {
     transform: "rotate(0deg)",
@@ -42,6 +45,19 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function CardView({ item, handleDelete, history }) {
+  function myFunction() {
+    var x = document.getElementById("demo");
+    alert("Answer: " + `${item.username}`);
+  }
+  function Random() {
+    return (
+      <div className="random">
+        <button className="chances" onClick={() => myFunction()}>
+          Click to Reveal Answer
+        </button>
+      </div>
+    );
+  }
   const classes = useStyles();
   let userName = localStorage.getItem("username");
   return (
@@ -50,17 +66,13 @@ export default function CardView({ item, handleDelete, history }) {
       style={{
         margin: "20px",
         width: "300px",
-        backgroundColor: "#111",
+        backgroundColor: "#011936",
         color: "white",
       }}
     >
-      <h2>{item.name}</h2>
+      <h3>{item.description}</h3>
 
-      <CardMedia
-        className={classes.media}
-
-        // image={logo}
-      />
+      <CardMedia className={classes.media} image={question} />
       <CardContent>
         <Typography
           className="card-stuff"
@@ -69,10 +81,11 @@ export default function CardView({ item, handleDelete, history }) {
           color="white"
           component="h1"
         >
-          {item.description}
+          <Random />
         </Typography>
+        <br />
         <Typography variant="body1" color="white" component="h1">
-          Riddle By: {item.username}
+          <h3>Riddle Posted By: {item.name}</h3>
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
