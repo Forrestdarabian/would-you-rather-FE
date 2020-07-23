@@ -31,7 +31,8 @@ const useStyles = makeStyles((theme) => ({
   },
   expand: {
     transform: "rotate(0deg)",
-    marginLeft: "auto",
+    marginLeft: "43%",
+    color: "#fefae0",
     transition: theme.transitions.create("transform", {
       duration: theme.transitions.duration.shortest,
     }),
@@ -103,14 +104,14 @@ export default function CardView({ item, handleDelete, history }) {
             <EditIcon type="edit" key="edit" />
           </a>
         </IconButton>
-        <Random />
+        <Random /> */}
         <IconButton
           className={classes.expand}
           onClick={() => handleDelete(item.id)}
           aria-label="show-more"
         >
           <DeleteIcon />
-        </IconButton> */}
+        </IconButton>
       </CardActions>
     </Card>
   );
