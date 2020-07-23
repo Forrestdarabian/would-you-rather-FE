@@ -15,19 +15,19 @@ function Footer(props) {
           <b> Forrest Darabian </b>
         </p>
       </div>
-      <a href="/register">
+      <a className="active" href="/register">
         <h1>Register</h1>
       </a>
-      <a href="/login">
+      <a className="active" href="/login">
         <h1>Login</h1>
       </a>
       <a className="active" href="/home">
         <h1>Home</h1>
       </a>
-      <a href="/create">
+      <a className="active" href="/create">
         <h1>Create</h1>
       </a>
-      <a href="/riddles">
+      <a className="active" href="/riddles">
         <h1>Riddles</h1>
       </a>
       {token ? (

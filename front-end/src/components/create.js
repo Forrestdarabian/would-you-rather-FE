@@ -119,6 +119,12 @@ const Create = ({
         </button>
         <br />
       </form>
+      <div className="bottom-copyright">
+        <p>
+          © 2020
+          <b> Forrest Darabian </b>
+        </p>
+      </div>
       <footer className="footer">
         <Footer />
       </footer>

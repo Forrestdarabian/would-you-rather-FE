@@ -143,7 +143,7 @@ img.question {
 
 @media (max-width: 400px) {
   .startup-div h1 {
-    font-size: small;
+    font-size: 25px;
   }
 }
 
@@ -195,4 +195,19 @@ img.question {
     margin-left: 20px;
     margin-right: 20px;
   }
+}
+
+@media (min-width: 965px) {
+  .bottom-copyright {
+    display: none;
+  }
+}
+
+.bottom-copyright a {
+  text-decoration: none;
+  color: #fefae0;
+}
+.bottom-copyright a:hover {
+  background-color: #ed254e;
+  color: black;
 }

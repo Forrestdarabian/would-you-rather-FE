@@ -42,6 +42,10 @@ const useStyles = makeStyles((theme) => ({
   avatar: {
     backgroundColor: red[500],
   },
+  h3: {
+    marginLeft: "15%",
+    marginRight: "15%",
+  },
 }));
 
 export default function CardView({ item, handleDelete, history }) {
@@ -67,7 +71,9 @@ export default function CardView({ item, handleDelete, history }) {
         margin: "20px",
         width: "300px",
         backgroundColor: "#011936",
-        color: "white",
+        color: "#fefae0",
+        paddingLeft: "15px",
+        paddingRight: "15px",
       }}
     >
       <h3>{item.description}</h3>
@@ -78,13 +84,13 @@ export default function CardView({ item, handleDelete, history }) {
           className="card-stuff"
           variant="body1"
           fontFamily='Exo", sans-serif'
-          color="white"
+          color="#fefae0"
           component="h1"
         >
           <Random />
         </Typography>
         <br />
-        <Typography variant="body1" color="white" component="h1">
+        <Typography variant="body1" color="#fefae0" component="h1">
           <h3>Riddle Posted By: {item.name}</h3>
         </Typography>
       </CardContent>

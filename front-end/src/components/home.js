@@ -64,6 +64,24 @@ function Home(props) {
           over to the riddles tab to check some out!
         </p>
       </div>
+
+      <div className="bottom-copyright">
+        <p>
+          © 2020
+          <b> Forrest Darabian </b>
+        </p>
+      </div>
+      <div className="bottom-copyright">
+        {" "}
+        <a href="mailto:forrestdarabian@gmail.com">
+          <i className="ion-ios-email fa-icons"></i>
+          Contact Me
+        </a>{" "}
+        <br />
+        <a href="https://www.forrestdarabian.com/">
+          <i className="fa-angle-double-right"></i>Developers Site
+        </a>
+      </div>
       <footer className="footer">
         <Footer />
       </footer>
