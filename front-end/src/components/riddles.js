@@ -57,12 +57,15 @@ const Riddles = (props) => {
         })}{" "}
       </div>
       <br />
+      <img src={loading} width="50px" id="hideMe" alt="loading" />
+      <br />
       <div className="bottom-copyright">
         <p>
           © 2020
           <b> Forrest Darabian </b>
         </p>
       </div>
+      <br />
       <footer className="footer">
         <Footer />
       </footer>
